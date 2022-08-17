@@ -6,7 +6,7 @@ This implementation taks only one line of code.
 ## How to use?
 Before your mainloop, place dnd(). i.e.:
 ```
-from tk_widget_dnd import dnd
+from tk_widget_dnd import dnd, get_widgets_position, set_widgets_position
 
 def main():
   # some tkinter code
@@ -22,3 +22,13 @@ from tk_widget_dnd import dnd
 dnd(globals(), mouse_button=1)
 window.mainloop()
 ```
+
+### Save widgets position:
+```
+widgets_position = get_widgets_position(locals())
+```
+### Load widgets position:
+```
+set_widgets_position(locals(), widgets_position)
+```
+
