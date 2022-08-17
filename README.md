@@ -10,6 +10,17 @@ Before your mainloop, place dnd(). i.e.:
 from tk_widget_dnd import dnd
 
 # some tkinter code
+def main():
+  # some tkinter code
+
+  dnd(locals(), mouse_button=3)
+  window.mainloop()
+```
+or
+```
+from tk_widget_dnd import dnd
+
+# some tkinter code
 
 dnd(globals(), mouse_button=1)
 
