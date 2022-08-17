@@ -14,10 +14,11 @@ def dnd(variables, anchor=CENTER, mouse_button=1):
                                                             anchor=anchor)) for k, v in valid_widgets.items()]
 
 
-def get_widgets_position():
-    return {k: (v.winfo_x(), v.winfo_y()) for k, v in globals().items() if "tkinter" in str(type(v)).lower()}
+def get_widgets_position(variables):
+    valid_widgets = get_widgets(variables)
+    return {k: (v.winfo_x(), v.winfo_y()) for k, v in valid_widgets.items()}
 
 
-def set_widgets_position(positions):
+def set_widgets_position(variables, positions):
     for k, v in positions.items():
-        globals()[k].place(x=v[0], y=v[1])
+        variables[k].place(x=v[0], y=v[1])
