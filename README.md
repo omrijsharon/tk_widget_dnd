@@ -6,6 +6,10 @@ This implementation taks only one line of code.
 ## How to use?
 Before your mainloop, place dnd(). i.e.:
 ```
+from tk_widget_dnd import dnd
+
+# some tkinter code
+
 dnd()
 window.mainloop()
 ```
