@@ -26,9 +26,11 @@ window.mainloop()
 ### Save widgets position:
 ```
 widgets_position = get_widgets_position(locals())
+# Here you can save widgets_position to a yaml, json, pickle file... 
 ```
 ### Load widgets position:
 ```
+# Here you load widgets_position from a yaml, json, pickle file... 
 set_widgets_position(locals(), widgets_position)
 ```
 
