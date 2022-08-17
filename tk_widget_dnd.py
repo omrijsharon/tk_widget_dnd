@@ -19,6 +19,6 @@ def get_widgets_position(variables):
     return {k: (v.winfo_x(), v.winfo_y()) for k, v in valid_widgets.items()}
 
 
-def set_widgets_position(variables, positions):
-    for k, v in positions.items():
+def set_widgets_position(variables, widgets_position):
+    for k, v in widgets_position.items():
         variables[k].place(x=v[0], y=v[1])
