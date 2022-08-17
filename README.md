@@ -5,6 +5,18 @@ This implementation taks only one line of code.
 
 ## How to use?
 Before your mainloop, place dnd(). i.e.:
+### Without saving:
+```
+from tk_widget_dnd import dnd
+
+# some tkinter code
+
+dnd(globals(), mouse_button=1)
+
+window.mainloop()
+```
+
+### With saving:
 ```
 from tk_widget_dnd import dnd, get_widgets_position, set_widgets_position
 from functools import partial
