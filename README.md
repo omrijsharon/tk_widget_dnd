@@ -39,7 +39,7 @@ def main():
   window.protocol("WM_DELETE_WINDOW", quit_func) 
   window.mainloop()
 ```
-* `locals()` are the local variables in the scope. The widgets are a subset of these variables. Only bindable tkinter widgets are saved.
+* `locals()` or `globals()` are the variables in the desired scope. The widgets are a subset of these variables. *Only bindable tkinter widgets are saved*.
 * `quit_app` function is the original quiting function you put in window.protocol("WM_DELETE_WINDOW", quit_app).
 * `save_widget_position` function saves the dictionary of the widgets and their position in a file to "path".
 
