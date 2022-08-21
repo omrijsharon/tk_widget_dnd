@@ -51,7 +51,7 @@ set_widgets_position(locals(), widgets_position)
 
 ## Explanations:
 
-* `locals()` or `globals()` are the variables in the desired scope. The widgets are a subset of these variables. *Only bindable tkinter widgets are saved*.
+`locals()` or `globals()` are the variables in the desired scope. The widgets are a subset of these variables. *Only bindable tkinter widgets are saved*.
 - dnd function lets you move widgets freely.
 - quit_wrapper lets you do somthing with the widgets coordinates. Its arguments:
   - variables: a dictionary of all the variables in the desired scope. Usually using `locals()` or `globals()`.
