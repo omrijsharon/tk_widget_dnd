@@ -26,7 +26,7 @@ from tk_widget_dnd import dnd, quit_wrapper
 
 dnd(globals(), mouse_button=1)
 
-root.protocol("WM_DELETE_WINDOW", quit_wrapper(locals(), verbose=True))
+root.protocol("WM_DELETE_WINDOW", quit_wrapper(globals(), verbose=True))
 window.mainloop()
 ```
 - dnd function lets you move widgets freely.
