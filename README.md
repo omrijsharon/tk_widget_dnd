@@ -14,6 +14,7 @@ def main():
   # some tkinter code
 
   dnd(locals(), mouse_button=3)
+  
   root.protocol("WM_DELETE_WINDOW", quit_wrapper(locals(), verbose=True))
   window.mainloop()
 ```
@@ -24,6 +25,7 @@ from tk_widget_dnd import dnd, quit_wrapper
 # some tkinter code
 
 dnd(globals(), mouse_button=1)
+
 root.protocol("WM_DELETE_WINDOW", quit_wrapper(locals(), verbose=True))
 window.mainloop()
 ```
