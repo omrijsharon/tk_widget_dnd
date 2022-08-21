@@ -44,6 +44,8 @@ def main():
 
 ### Load widgets position:
 ```
+from tk_widget_dnd import dnd, quit_wrapper, set_widgets_position
+
 # some tkinter code
 # Here you load widgets_position from a yaml, json, pickle file... 
 set_widgets_position(locals(), widgets_position)
