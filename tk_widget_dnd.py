@@ -25,11 +25,18 @@ def get_widgets_position(variables):
 def set_widgets_position(variables, widgets_position):
     for k, v in widgets_position.items():
         variables[k].place(x=v[0], y=v[1])
-        
-        
-def quit_wrapper(variables, quit_function, save_function, path, *args, **kwargs):
+
+
+def quit_wrapper(variables, quit_function=None, save_function=None, path=None, verbose=False, *args, **kwargs):
     def wrapper():
         widgets_position = get_widgets_position(variables)
-        save_function(widgets_position, path)
-        quit_function(*args, **kwargs)
+        if verbose:
+            for k, v in widgets_position.items():
+                print(f'{str(v): <11}', k)
+        if save_function:
+            save_function(widgets_position, path)
+        if quit_function:
+            quit_function(*args, **kwargs)
+        else:
+            list(widgets_position.values())[0].master.quit()
     return wrapper
