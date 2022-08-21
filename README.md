@@ -41,7 +41,15 @@ def main():
   window.protocol("WM_DELETE_WINDOW", quit_func) 
   window.mainloop()
 ```
-### Explanations:
+
+### Load widgets position:
+```
+# some tkinter code
+# Here you load widgets_position from a yaml, json, pickle file... 
+set_widgets_position(locals(), widgets_position)
+```
+
+## Explanations:
 
 * `locals()` or `globals()` are the variables in the desired scope. The widgets are a subset of these variables. *Only bindable tkinter widgets are saved*.
 - dnd function lets you move widgets freely.
@@ -53,11 +61,4 @@ def main():
   - path: the path given to the save function.
   - verbose: True/False - to print or not to print the widgets coordinates when the user quits.
   -  *args, **kwargs: all the inputs to quit_function.
-
-### Load widgets position:
-```
-# some tkinter code
-# Here you load widgets_position from a yaml, json, pickle file... 
-set_widgets_position(locals(), widgets_position)
-```
 
