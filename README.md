@@ -29,14 +29,14 @@ dnd(globals(), mouse_button=1)
 root.protocol("WM_DELETE_WINDOW", quit_wrapper(locals(), verbose=True))
 window.mainloop()
 ```
-dnd function lets you move widgets freely.
-quit_wrapper lets you do somthing with the widgets coordinates. Its arguments:
-- quit_function: the original quit function that runs when user quits the program.
-- save_function: a function that saves the dictionary of {widgets_names: widgets_coordinates} to a file
-  - This funcion takes 2 arguments: widgets_dict, path.
-- path: the path given to the save function.
-- verbose: True/False - to print or not to print the widgets coordinates when the user quits.
--  *args, **kwargs: all the inputs to quit_function.
+- dnd function lets you move widgets freely.
+- quit_wrapper lets you do somthing with the widgets coordinates. Its arguments:
+  - quit_function: the original quit function that runs when user quits the program.
+  - save_function: a function that saves the dictionary of {widgets_names: widgets_coordinates} to a file
+    - This funcion takes 2 arguments: widgets_dict, path.
+  - path: the path given to the save function.
+  - verbose: True/False - to print or not to print the widgets coordinates when the user quits.
+  -  *args, **kwargs: all the inputs to quit_function.
 
 
 ### With saving:
